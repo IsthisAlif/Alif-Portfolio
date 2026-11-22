@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Alif's Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdul Alif bin Abdul Rahim – Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
 
@@ -39,7 +39,7 @@
       <h1>Abdul Alif bin Abdul Rahim</h1>
       <p class="role">Computer Science graduate</p>
       <p class="intro">
-        I build software that is fun and useful.
+        I build machine learning and mobile applications. I recently graduated from the University of Technology Sarawak with a Bachelor of Computer Science.
       </p>
       <div class="buttons">
         <a class="btn primary" href="#projects">View my projects</a>
@@ -47,11 +47,10 @@
       </div>
     </div>
 
-    <!-- Highlight box: change the text freely -->
-    <div class="detect">
-      <span class="label">Gold Medal</span>
-      <strong>MYSL sign language app</strong>
-      <span>Final Year Project Gold Medalist, Retex July 2025</span>
+    <!-- Your photo: replace profile.png with your own picture (keep the same file name) -->
+    <div class="profile">
+      <img class="photo" src="profile.png" alt="Portrait of Abdul Alif">
+      <span>Sibu, Sarawak, Malaysia</span>
     </div>
   </header>
 
@@ -64,17 +63,16 @@
     <h2>Projects</h2>
     <div class="grid">
 
-      <article class="card featured">
-        <span class="badge">Gold Medal, Retex 2025</span>
+      <article class="card">
         <h3>MYSL – Malaysian Sign Language Recognition App</h3>
-        <p>An Android app that recognises Malaysian Sign Language in real time. A YOLOv8 deep learning model reads hand gestures through the phone camera and gives instant translation feedback. I handled dataset preparation, model training, gesture optimisation and on-device deployment.</p>
+        <p>An android app that recognises Malaysian Sign Language in real time. A YOLOv8 deep learning model reads hand gestures through the phone camera and gives instant translation feedback.</p>
         <div class="tags"><span class="tag">YOLOv8</span><span class="tag">Android Studio</span><span class="tag">Kotlin</span><span class="tag">Python</span></div>
       </article>
 
       <article class="card">
-        <h3>Local AI Chatbot with RAG</h3>
-        <p>An offline chatbot that answers questions about Sibu, Sarawak. It uses an open-source LLM with 4-bit quantisation, a Retrieval-Augmented Generation pipeline, QLoRA fine-tuning for Malaysian English, and a Flask API with multi-turn memory.</p>
-        <div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">QLoRA</span><span class="tag">Flask</span></div>
+        <h3>Poke Doublerush</h3>
+        <p>A browser based Pokémon roguelike featuring fast paced Double Battles, randomly generated teams, and iconic Pokémon battle gimmicks. Built using PokeAPI.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Javascript</span><span class="tag">API</span></div>
       </article>
 
       <article class="card">
@@ -87,24 +85,6 @@
         <h3>Sibu Wonders – Tourism Guide App</h3>
         <p>A mobile app that showcases attractions, cultural sites and local events in Sibu, with interactive maps and an accessible interface. Built in a team using GitHub.</p>
         <div class="tags"><span class="tag">.NET MAUI</span><span class="tag">C#</span><span class="tag">GitHub</span></div>
-      </article>
-
-      <article class="card">
-        <h3>UTS Lost and Found App</h3>
-        <p>A mobile app where users report lost items, search found items and match owners. I built the UI screens and the object-oriented backend model for items, users and status tracking.</p>
-        <div class="tags"><span class="tag">.NET MAUI</span><span class="tag">C#</span><span class="tag">OOP</span></div>
-      </article>
-
-      <article class="card">
-        <h3>Breast Cancer Diagnostic System</h3>
-        <p>A Support Vector Machine classifier that labels tumours as benign or malignant using the Breast Cancer Wisconsin (Diagnostic) dataset, with preprocessing, feature selection and evaluation.</p>
-        <div class="tags"><span class="tag">SVM</span><span class="tag">scikit-learn</span><span class="tag">pandas</span></div>
-      </article>
-
-      <article class="card">
-        <h3>AI Pool Game Scoring System</h3>
-        <p>A computer vision system that detects, tracks and scores pool balls in real time, using colour recognition to tell ball types apart and record each player’s score automatically.</p>
-        <div class="tags"><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">Computer vision</span></div>
       </article>
 
     </div>
@@ -149,7 +129,7 @@
       <div class="date">Sept 2022 – Feb 2026</div>
       <div>
         <h3>Bachelor of Computer Science (Hons)</h3>
-        <ul><li>University of Technology Sarawak, Sibu. CGPA 3.31</li></ul>
+        <ul><li>University of Technology Sarawak, Sibu.</li></ul>
       </div>
     </div>
 
@@ -157,17 +137,10 @@
       <div class="date">June 2021 – May 2022</div>
       <div>
         <h3>Foundation in Arts</h3>
-        <ul><li>University of Technology Sarawak, Sibu. CGPA 3.43</li></ul>
+        <ul><li>University of Technology Sarawak, Sibu.</li></ul>
       </div>
     </div>
 
-    <div class="row">
-      <div class="date">Jan 2016 – Dec 2020</div>
-      <div>
-        <h3>Sekolah Menengah Kebangsaan Agama Sibu</h3>
-        <ul><li>5A, 2A-, 2B+, 1B, 1C</li></ul>
-      </div>
-    </div>
   </section>
 
   <!-- ==========================================================
@@ -207,14 +180,6 @@
     <h2>Awards and activities</h2>
     <div class="grid">
       <div class="card">
-        <h3>Final Year Project Gold Medalist, Retex</h3>
-        <p>July 2025. Awarded for MYSL, the real-time sign language recognition app.</p>
-      </div>
-      <div class="card">
-        <h3>Dean’s List</h3>
-        <p>Year 3 Semester 1 (GPA 3.78) and Foundation Semester 2 (GPA 3.55).</p>
-      </div>
-      <div class="card">
         <h3>YIC Chumbaka Recognition Certificate</h3>
         <p>Nov 2022. Mentored a student who went on to win a competition award.</p>
       </div>
@@ -245,6 +210,6 @@
   <div class="wrap">© <span id="year">2026</span> Abdul Alif bin Abdul Rahim</div>
 </footer>
 
-<script src="main.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

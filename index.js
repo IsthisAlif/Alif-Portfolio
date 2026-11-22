@@ -12,7 +12,7 @@ function highlightNav() {
   sections.forEach((section, i) => {
     const active = section.offsetTop <= position &&
                    section.offsetTop + section.offsetHeight > position;
-    links[i].style.color = active ? "var(--accent)" : "";
+    links[i].style.color = active ? "var(--accent-dark)" : "";
   });
 }
 
