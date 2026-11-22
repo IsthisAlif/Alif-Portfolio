@@ -1,0 +1,98 @@
+/* ==========================================================
+   THEME – change colours and fonts here (they update the whole site)
+   ========================================================== */
+:root {
+  --bg:        #F4F7FA;   /* page background */
+  --surface:   #FFFFFF;   /* cards */
+  --text:      #16202E;   /* main text */
+  --muted:     #5A6778;   /* secondary text */
+  --line:      #D8E0E8;   /* borders */
+  --accent:    #0B7A86;   /* main accent colour (buttons, links) */
+  --accent-bg: #E1F2F4;   /* soft accent background (tags) */
+  --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --radius: 14px;
+  --max-width: 1040px;    /* width of the content column */
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E151D; --surface: #16202B; --text: #E8EEF4; --muted: #9AA8B8;
+    --line: #26323F; --accent: #4FC3CF; --accent-bg: #153239; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E151D; --surface: #16202B; --text: #E8EEF4; --muted: #9AA8B8;
+  --line: #26323F; --accent: #4FC3CF; --accent-bg: #153239; color-scheme: dark;
+}
+
+/* ==========================================================
+   2. BASE STYLES
+   ========================================================== */
+:root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+*, *::before, *::after { box-sizing: inherit; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.65; }
+a { color: var(--accent); }
+h1, h2, h3 { line-height: 1.2; margin: 0; }
+h2 { font-size: 1.7rem; font-weight: 800; margin-bottom: 1.5rem; }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p { margin: 0 0 .8rem; }
+section { padding: 4rem 0 0; }
+.wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* ==========================================================
+   3. NAVIGATION BAR
+   ========================================================== */
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; height: 58px; }
+nav .logo { font-weight: 800; text-decoration: none; color: var(--text); }
+nav ul { display: flex; gap: 1.2rem; list-style: none; margin: 0; padding: 0; overflow-x: auto; }
+nav ul a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: .95rem; white-space: nowrap; }
+nav ul a:hover { color: var(--accent); }
+
+/* ==========================================================
+   4. HERO (top section)
+   ========================================================== */
+.hero { padding-top: 4.5rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; }
+.hero .role { font-size: 1.2rem; color: var(--accent); font-weight: 700; margin: .6rem 0 1rem; }
+.hero p.intro { color: var(--muted); max-width: 52ch; }
+.buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.btn { display: inline-block; padding: .7rem 1.3rem; border-radius: 10px; font-weight: 700; text-decoration: none; border: 2px solid var(--accent); }
+.btn.primary { background: var(--accent); color: var(--bg); }
+.btn.secondary { color: var(--accent); }
+
+/* The "detection box" – a nod to the YOLOv8 sign language project */
+.detect { position: relative; border: 2px solid var(--accent); border-radius: 6px; padding: 2.2rem 1.5rem 1.5rem; background: var(--accent-bg); }
+.detect .label { position: absolute; top: -2px; left: -2px; background: var(--accent); color: var(--bg); font-size: .8rem; font-weight: 700; padding: .25rem .7rem; border-radius: 4px 0 6px 0; }
+.detect strong { display: block; font-size: 1.25rem; margin-bottom: .3rem; }
+.detect span { color: var(--muted); font-size: .95rem; }
+
+/* ==========================================================
+   5. CARDS (projects, experience, education)
+   ========================================================== */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.2rem; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; }
+.card.featured { grid-column: 1 / -1; border-left: 5px solid var(--accent); }
+.card p { color: var(--muted); font-size: .95rem; }
+.tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+.tag { background: var(--accent-bg); color: var(--accent); font-size: .8rem; font-weight: 700; padding: .15rem .6rem; border-radius: 99px; }
+.badge { display: inline-block; font-size: .8rem; font-weight: 700; margin-bottom: .5rem; }
+
+/* Timeline rows (experience / education) */
+.row { display: grid; grid-template-columns: 170px 1fr; gap: 1rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+.row:first-of-type { border-top: 0; }
+.row .date { color: var(--muted); font-size: .9rem; font-weight: 500; }
+.row ul { margin: .4rem 0 0; padding-left: 1.1rem; color: var(--muted); font-size: .95rem; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
+
+/* Footer */
+footer { margin-top: 5rem; border-top: 1px solid var(--line); padding: 1.5rem 0; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 3rem; }
+  .row { grid-template-columns: 1fr; gap: .2rem; }
+}
