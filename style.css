@@ -282,3 +282,70 @@ footer {
     gap: 4px;
   }
 }
+
+/* ==========================================================
+   10. GITHUB LINE AND CONTACT LINKS
+   ========================================================== */
+.section-note {
+  margin: -8px 0 24px;
+  color: var(--muted);
+}
+
+.section-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: var(--accent-dark);
+}
+
+/* ==========================================================
+   11. SCROLL ANIMATION (fade in and slide up)
+   The "reveal" class is added by index.js. "visible" is added
+   when the element scrolls into view.
+   ========================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Skip the animation for people who turn motion off in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

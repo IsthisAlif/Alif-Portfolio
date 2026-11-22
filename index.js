@@ -1,5 +1,3 @@
-// main.js – small behaviours for the page.
-
 // 1. Show the current year in the footer.
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -18,3 +16,26 @@ function highlightNav() {
 
 window.addEventListener("scroll", highlightNav);
 highlightNav();
+
+// 3. Scroll animation: fade in and slide up when something enters the screen.
+//    To animate more things, add their CSS selector to this list.
+const animated = document.querySelectorAll("h2, .section-note, .card, .row, .hero > *");
+animated.forEach(el => el.classList.add("reveal"));
+
+// Cards in the same grid appear one after another (0s, 0.1s, 0.2s)
+document.querySelectorAll(".grid, .skills").forEach(grid => {
+  [...grid.children].forEach((card, i) => {
+    card.style.transitionDelay = (i % 3) * 0.1 + "s";
+  });
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);            // animate only once
+    }
+  });
+}, { threshold: 0.15 });
+
+animated.forEach(el => observer.observe(el));
